@@ -9,7 +9,27 @@
 :root {
   --dark-color: #000;
 }
+onload = () = {
+  const c = setTimeout{() = {
+    document.body.classList.remove("not-loaded");
 
+    const titles = ('I love you vis').split('')
+    const tittleElement = document.getElementById('title);
+    let index = 0;
+
+    function appendTittle() {
+      if (index < titles.length) {
+        titleElement.innerHTML += titles[index];
+        index++;
+        setTimeout(appeendTitle, 300); // 100ms delay
+      }
+    }
+
+    appendTitle();
+
+    clearTimeout(c);
+  }, 1000);
+    }
 body {
   display: flex;
   align-items: flex-end;
